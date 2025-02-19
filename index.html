@@ -1,0 +1,607 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <style>
+        .reportPgaeHeader {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 1px 0px 7px #00000045;
+            position:sticky;
+            top:0;
+        }
+            .reportPgaeHeader div{
+
+            }
+            .reportPgaeHeader h4 {
+                margin: 0;
+                padding: 0;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                font-size: 26px;
+            }
+            .reportPgaeHeader p {
+                margin: 0;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+            .reportPgaeHeader a {
+                display: inline-block;
+                border: 1px solid #c8c5c5;
+                padding: 6px;
+                border-radius: 4px;
+                width: 40px;
+                height: 40px;
+                margin-right: 8px;
+            }
+                .reportPgaeHeader a:last-child{
+                    margin-right:0;
+                }
+                .reportPgaeHeader a img {
+                    width: 100%;
+                }
+        .printableBox{
+            padding:30px 40px;
+        }
+        .printableArea {
+            background-color: #fff;
+            /*height: 200px;*/
+            border: 1px solid #cfcccc;
+            border-radius: 4px;
+            overflow:hidden;
+        }
+        @media print {
+            @page {
+                size: A4;
+                /*margin: 20mm;*/
+            }
+            .print-bg-black {
+                background-color: #1e1e1e !important;
+                -webkit-print-color-adjust: exact; /* Ensures WebKit-based browsers respect background color */
+                color-adjust: exact; /* Standard property for other browsers */
+            }
+            .print-bg-gray {
+                background-color: #dfdcdc !important;
+                -webkit-print-color-adjust: exact; /* Ensures WebKit-based browsers respect background color */
+                color-adjust: exact; /* Standard property for other browsers */
+            }
+            .print-bg-lightgray {
+                background-color: #eaeaea !important;
+                -webkit-print-color-adjust: exact; /* Ensures WebKit-based browsers respect background color */
+                color-adjust: exact; /* Standard property for other browsers */
+            }
+            .print-bg-badge {
+                background-color: #15576d !important;
+                -webkit-print-color-adjust: exact; /* Ensures WebKit-based browsers respect background color */
+                color-adjust: exact; /* Standard property for other browsers */
+            }
+            .printableBox{
+                padding:0;
+            }
+            body {
+                background: none;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .report-container {
+                width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #F0F0F0;margin:0;padding:0">
+    <div class="reportPgaeHeader">
+        <div>
+            <h4>PDF Report</h4>
+            <p>
+                PDF Report For AI Resource Financial Insights and Operations Overview
+            </p>
+        </div>
+        <div>
+            <a href="javascript:void()" onclick="pdfDoc()">
+                <img src="sheet.png" />
+                <!--<span>Download PDF</span>-->
+            </a>
+            <a href="javascript:void()" onclick="printdDoc()">
+                <img src="printer.png" />
+                <!--<span>Print</span>-->
+            </a>
+            <a href="javascript:void()" onclick="emailDoc()">
+                <img src="sending-mail.png" />
+                <!--<span>Share on Email</span>-->
+            </a>
+        </div>
+    </div>
+    <div class="printableBox">
+        <div id="reportContent">
+            <div class="printableArea">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 26px;">FinOps PDF Report</h4>
+                                        <p style="color:#eaeaea;margin: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                            PDF Report For AI Resource Financial Insights and Operations Overview
+                                        </p>
+                                    </td>
+                                    <td align="right">
+                                        <table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td style="color:#eaeaea;font-family: calibri, Arial, Helvetica, sans-serif;font-size:20px; font-weight:600">Report Details</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color:#eaeaea;font-family: calibri, Arial, Helvetica, sans-serif;font-size:16px;">
+                                                    <span style="display: inline-block;margin-right: 4px;color: #c4c4c4;">User ID:</span><strong>isrmuc@unifycloud.com</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color:#eaeaea;font-family: calibri, Arial, Helvetica, sans-serif;font-size:16px;">
+                                                    <span style="display: inline-block;margin-right: 4px;color: #c4c4c4;">Date Range:</span><strong>2024-11-01-2024-11-30</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color:#eaeaea;font-family: calibri, Arial, Helvetica, sans-serif;font-size:16px;">
+                                                    <span style="display: inline-block;margin-right: 4px;color: #c4c4c4;">Report Generated Date:</span><strong>2025-02-17</strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;background-color: gainsboro;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;padding: 14px;">
+                                        <h5 style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;margin:0;padding:0">Services Cost Breakdown Report</h5>
+                                        <span>Current vs. Previous Cycle</span><br /><strong>Nov 2024</strong>
+                                    </td>
+                                    <td align="center">
+                                        <img src="img/right-arrow.png" height="35" />
+                                    </td>
+                                    <td align="center" style="padding: 14px;border-left:1px solid #bab9b9;border-right:1px solid #bab9b9">
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;"> $ 990.85</span>
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block; font-weight: 600;color: #494949;">Current Cycle</span>
+                                    </td>
+                                    <td align="center" style="padding: 14px;border-right:1px solid #bab9b9">
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;"> $ 597.94</span>
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Previous Cycle</span>
+                                    </td>
+                                    <td align="center" style="padding: 14px;">
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;">$ 392.92</span>
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Cost Difference</span>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="">
+                        <td style="padding:14px;border-bottom: 1px solid #cfcccc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td rowspan="2" width="" style="">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="border: 1px solid #cfcccc;">
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td width="40" align="center" style="padding:4px;">
+                                                                <img src="img/az-sub.png" height="36" style="height:30px" />
+                                                            </td>
+                                                            <td style="padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">Total no. of Subscription</td>
+                                                            <th width="100" align="right" style="padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">11</th>
+                                                        </tr>
+                                                        <tr><td colspan="3" height="2"></td></tr>
+                                                        <tr>
+                                                            <td width="40" align="center" style="border-top: 1px solid #cfcccc;border-bottom: 1px solid #cfcccc;padding:4px;">
+                                                                <img src="img/Azure-Icons/app services/10035-icon-service-App-Services.svg" style="height:30px" />
+                                                            </td>
+                                                            <td style="border-top: 1px solid #cfcccc;border-bottom: 1px solid #cfcccc;padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">Total no. of Services</td>
+                                                            <th width="100" align="right" style="border-top: 1px solid #cfcccc;border-bottom: 1px solid #cfcccc;padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">535</th>
+                                                        </tr>
+                                                        <tr><td colspan="3" height="2"></td></tr>
+                                                        <tr>
+                                                            <td width="40" align="center" style="padding:4px;">
+                                                                <img src="img/spending.png" style="height:30px" />
+                                                            </td>
+                                                            <td style="padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">Total Expenditure<span class="print-bg-badge" style="display: inline-block;background-color: #15576d;border-radius: 20px;padding: 2px 10px;margin-left: 4px;color: #fff;font-size: 13px;">Feb-2025</span></td>
+                                                            <th width="100" align="right" style="padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">
+                                                                $4.29K
+                                                            </th>
+                                                        </tr>
+                                                        <tr><td colspan="3" height="2"></td></tr>
+                                                        <tr>
+                                                            <td width="40" align="center" style="border-top: 1px solid #cfcccc;padding:4px;">
+                                                                <img src="img/budget.png" style="height:30px" />
+                                                            </td>
+                                                            <td style="border-top: 1px solid #cfcccc;padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">last 2 Months Average Cost <span class="print-bg-badge" style="display: inline-block;background-color: #15576d;border-radius: 20px;padding: 2px 10px;margin-left: 4px;color: #fff;font-size: 13px;">Daily</span></td>
+                                                            <th width="100" align="right" style="border-top: 1px solid #cfcccc;padding:4px 8px;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;">$253.41</th>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td rowspan="2" width="50" style="padding:10px">
+                                        <span style="display: block;width: 50px;height: 3px;border-top: 2px dashed #cfcccc;"></span>
+                                    </td>
+                                    <td rowspan="2" align="center" width="">
+                                        <img src="img/money.png" height="50" /><br />
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;font-weight:600">Cost Saving</span><br />
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 22px;font-weight: 600;color: #49aa69;">Opportunity</span><br />
+                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;font-size: 32px;color: #494949;line-height: 44px;">$641.39</span>
+                                    </td>
+                                    <td rowspan="2" width="50" style="padding:10px">
+                                        <span style="display: block;width: 50px;height: 3px;border-top: 2px dashed #cfcccc;"></span>
+                                    </td>
+                                    <td class="print-bg-lightgray" align="center" style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;background-color: #eaeaea;border: 1px solid #cfcccc;border-bottom: none;">
+                                        <div>
+                                            Total
+                                            orphan services
+                                            <br />
+                                            <span style="font-size: 22px;">36</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="print-bg-lightgray" align="center" style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;background-color: #eaeaea;border: 1px solid #cfcccc;">
+                                        <div>
+                                            Cost saving by removing orphan services
+                                            <br />
+                                            <span style="font-size: 22px;">$ 3.47</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" height="20"></td>
+                                </tr>
+                                <!--<tr>
+                                    <td colspan="4" align="center">
+                                        <span style="display: block;width: 4px;height: 100px;border-left: 2px dashed #cfcccc;"></span>
+                                    </td>
+                                </tr>-->
+                                <tr>
+                                    <td colspan="5">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;font-weight: 600; padding-bottom: 10px;">Saving Opportunity BreakUp</td>
+                                            </tr>
+                                        </table>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr style="">
+                                                <th align="center" style="border-top:2px solid #cfcccc;border-right:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">S No.</th>
+                                                <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Subscription Name</th>
+                                                <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Resource Group</th>
+                                                <th align="right" style="border-top:2px solid #cfcccc;border-left:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Costs</th>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="border-top:1px solid #cfcccc;border-right:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1</td>
+                                                <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">062179ae-4f94-40cb-b67e-bbc95517c8a5.</td>
+                                                <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">rg-appgateway-prod.</td>
+                                                <td align="right" style="border-top:1px solid #cfcccc;border-left:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 352.0462</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="border-top:1px solid #cfcccc;border-right:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1</td>
+                                                <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">062179ae-4f94-40cb-b67e-bbc95517c8a5.</td>
+                                                <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">rg-appgateway-prod.</td>
+                                                <td align="right" style="border-top:1px solid #cfcccc;border-left:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 352.0462</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="border-top:1px solid #cfcccc;border-right:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1</td>
+                                                <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">062179ae-4f94-40cb-b67e-bbc95517c8a5.</td>
+                                                <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">rg-appgateway-prod.</td>
+                                                <td align="right" style="border-top:1px solid #cfcccc;border-left:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 352.0462</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;">Services Cost Key Insights</h4>
+
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This table provides a comparative analysis of service costs between the previous and current billing cycles. It highlights the cost variations for each service, showing the increase or decrease in expenses. By examining this data, clients can identify the most cost-intensive services, track spending trends, and make informed decisions to optimize resource usage and reduce unnecessary expenditures.
+                            </p>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th align="center" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">S No.</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Service Name</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Previous Cycle Cost ($)</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Current Cycle Cost ($)</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Change ($)</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Percentage of Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">App Service Plan</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 150.69</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 118.94</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ -31.74</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">12.00%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Domain Services</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 143.96</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 278.32</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 134.36</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">28.09%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">3</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Load Balancer</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 9.05</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 17.49</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 8.44</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1.77%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">4</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Public IP Addresses</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 3.60</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 6.96</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 3.36</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">0.70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">5</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Application Gateway</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 182.08</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 352.05</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 169.97</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">35.53%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">6</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">disks</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 3.71</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 7.43</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 3.71</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">0.75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">7</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">cognitiveservicesType</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 100.49</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 200.98</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 100.49</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">20.28%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">8</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Storage Accounts</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 4.04</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 8.04</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 4.00</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">0.81%</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">9</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">searchservices</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 0.33</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 0.65</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$ 0.33</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">0.07%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #e7f7e2;padding:14px;">
+                            <h5 style="color:#454545;margin-bottom: 10px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Conclusion</h5>
+                            <p style="color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                The previous cycle had $ 597.94 recorded cost, and this month's total cost as of 2025-02-18 is $ 990.85.
+                                According to the report, the top three cost-consuming services in the previous month were Application Gateway, App Service Plan, and Domain Services, with costs of $ 182.08, $ 150.69, and $ 143.96, respectively. In the current cycle, the top three most cost-consuming services are Application Gateway, Domain Services, and cognitiveservicesType, with costs of $ 352.05, $ 278.32, and $ 200.98, respectively. Monitoring and optimizing these services can help reduce costs in future cycles. Billow table contains details about the exact resources as per services
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;">Detailed breakdown of resource costs</h4>
+
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This section provides a detailed breakdown of resource costs, helping clients identify where expenses are incurred. It includes Service Name, Resource Name, and Cost ($) to highlight the resources contributing to overall spending
+                            </p>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <thead>
+                                    <tr>
+                                        <th align="center" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">S No.</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Service Name</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Resource Name</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Cost ($)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">App Service Plan</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">ASP-rgfuncappopenaiprod-a2c6</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">48.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Domain Services</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">unifycloud.com</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">278.32</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">3</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Load Balancer</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aadds-120e66b821c74c54b682327214eeecaa-lb</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">17.49</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">4</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Public IP Addresses</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aadds-120e66b821c74c54b682327214eeecaa-pip</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">3.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">5</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">App Service Plan</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">asp-serviceteammasterclass</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">70.73</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">6</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Application Gateway</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">ag-cloudatlas-prod</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">352.05</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">7</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Public IP Addresses</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">agn-cloudatlas-pip</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">3.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">8</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">disks</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">DSK-35_OsDisk_1_360663602aad4262b1395b039e524267</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1.74</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">9</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">disks</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">newdisk</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">5.68</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">10</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">cognitiveservicesType</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">PBIAoi</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">200.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">11</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Storage Accounts</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aisample01</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">8.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">12</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">cognitiveservicesType</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">test-ai-search-multi1</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">0.98</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">13</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">searchservices</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">documentsearch-dev-westus-ai</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">0.65</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;">Daily Spend Analysis</h4>
+                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Per Day Consumption Costs ($)</h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This graph displays the<strong> per-day consumption cost</strong> of your environment, providing a <strong>day-wise breakdown</strong>.
+                                It allows you to identify <strong>cost spikes</strong>,increase,decrease of expenditure of particular days.
+                                you can also compare the expenses of a particular day with the <strong>previous and following days</strong>.
+                                Additionally, we provide a summary of these spikes below the graph, where you can analyze the cause of each spike,
+                                identify the <strong>responsible resource, and examine its utilization details</strong> whether and what has gone for this increment of cost
+                                for that particular days and you can take key actions according to that criteria of spending of cost.
+
+                            </p>
+                            <div id="costDistribution"></div>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <script src="JavaScript.js?v1.5"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .report-container {
+            width: 793px; /* A4 width */
+            max-width: 100%;
+            background: white;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f4f4f4;
+            border-left: 5px solid #007bff;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            button:hover {
+                background: #0056b3;
+            }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+
+            body {
+                background: none;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .report-container {
+                width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <div class="header">
+            <img src="logo.png" alt="Company Logo">
+            <h1>Monthly Sales Report</h1>
+        </div>
+
+        <div class="summary">
+            <strong>Summary:</strong>
+            <p>This report provides an overview of monthly sales performance, highlighting key metrics and trends.</p>
+        </div>
+
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Sales</th>
+                    <th>Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product A</td>
+                    <td>120</td>
+                    <td>$12,000</td>
+                </tr>
+                <tr>
+                    <td>Product B</td>
+                    <td>80</td>
+                    <td>$8,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <button onclick="window.print()">Print Report</button>
+            <button onclick="sendEmail()">Email Report</button>
+        </div>
+    </div>
+
+    <script>
+        function sendEmail() {
+            const subject = encodeURIComponent("Monthly Sales Report");
+            const body = encodeURIComponent("Please find the attached sales report.");
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
