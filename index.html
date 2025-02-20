@@ -14,6 +14,7 @@
             box-shadow: 1px 0px 7px #00000045;
             position:sticky;
             top:0;
+            z-index:999;
         }
             .reportPgaeHeader div{
 
@@ -382,10 +383,10 @@
                                     <td colspan="4" height="20"></td>
                                 </tr>
                                 <!--<tr>
-                                    <td colspan="4" align="center">
-                                        <span style="display: block;width: 4px;height: 100px;border-left: 2px dashed #cfcccc;"></span>
-                                    </td>
-                                </tr>-->
+                            <td colspan="4" align="center">
+                                <span style="display: block;width: 4px;height: 100px;border-left: 2px dashed #cfcccc;"></span>
+                            </td>
+                        </tr>-->
                                 <tr>
                                     <td colspan="5">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -432,11 +433,11 @@
             <div class="printableArea" style="margin-top:20px">
                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
                                     <td>
-                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;">Services Cost Key Insights</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Services Cost Key Insights</h4>
 
                                     </td>
 
@@ -552,11 +553,11 @@
             <div class="printableArea" style="margin-top:20px">
                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
                                     <td>
-                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;">Detailed breakdown of resource costs</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Detailed breakdown of resource costs</h4>
 
                                     </td>
 
@@ -668,12 +669,12 @@
             <div class="printableArea" style="margin-top:20px">
                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                        <td class="print-bg-black" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #1e1e1e;">
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
                                     <td>
-                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;">Daily Spend Analysis</h4>
-                                        <h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Per Day Consumption Costs ($)</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Daily Spend Analysis</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Per Day Consumption Costs ($)</h4>
                                     </td>
 
                                 </tr>
@@ -698,8 +699,511 @@
 
                 </table>
             </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Comparison of Azure OpenAI models (GPT-4, GPT-3.5-Turbo, and o-series)</h4>
+
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This table provides a comparison of Azure OpenAI models (GPT-4, GPT-3.5-Turbo, and o-series) based on their usage scenarios, accuracy, latency, and throughput. It helps users identify which model is best suited for their specific needs, whether for high-accuracy tasks, balanced performance, or optimized batch processing.
+                            </p>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <thead>
+                                    <tr>
+                                        <th align="center" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">S No.</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Feature</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">GPT-4</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">GPT-3.5-Turbo</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">o-series Models</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">1</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Usage &amp; Scenarios</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Best for complex tasks, high accuracy</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Good balance of speed &amp; accuracy</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Reasoning, problem-solving</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Model Accuracy</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">High</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Moderate</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">High</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">3</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Latency</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Higher</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Lower</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Moderate</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">4</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Throughput</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Depends on provisioned units</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Efficient</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Optimized for batch processing</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Daily Spend Analysis</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Per Day Consumption Costs ($)</h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This graph displays the<strong> per-day consumption cost</strong> of your environment, providing a <strong>day-wise breakdown</strong>.
+                                It allows you to identify <strong>cost spikes</strong>,increase,decrease of expenditure of particular days.
+                                you can also compare the expenses of a particular day with the <strong>previous and following days</strong>.
+                                Additionally, we provide a summary of these spikes below the graph, where you can analyze the cause of each spike,
+                                identify the <strong>responsible resource, and examine its utilization details</strong> whether and what has gone for this increment of cost
+                                for that particular days and you can take key actions according to that criteria of spending of cost.
+
+                            </p>
+                            <div id="costDistribution"></div>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Recommendations for Azure App Service Plans</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Based on CPU and Memory Utilization metrics</h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This table provides recommendations for Azure App Service Plans based on CPU and Memory Utilization metrics. It compares the current plan's cost and performance with a potential lower-tier option, highlighting possible cost savings if a downgrade is feasible. If no better alternative is available, the plan remains unchanged.
+                            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Spiked Cost of Resources and its Deviation with Utilization</h4>
+                                        <!--<h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Based on CPU and Memory Utilization metrics</h4>-->
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This section provides insights into resource cost spikes, their utilization impact, and highlights any unusual deviations in usage. It includes details such as Service Type, Resource Name, Usage Date, Cost Deviation (%), Prompt Tokens Deviation (%), Generated Tokens Deviation (%), and Total Calls Deviation (%), helping clients identify anomalies and manage resources effectively.
+                            </p>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Service Type</td>
+                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Cognitive Services</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Resource Name</td>
+                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">PBIAOi</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Usage Date</td>
+                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-11-05</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Cost Deviation(%)</td>
+                                    <td valign="top" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">
+                                        <img src="img/down.png" height="12" />
+                                        <span>888.75</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">PromtTokens Deviation(%)</td>
+                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">
+                                        <img src="img/down.png" height="12" /> 9288.85
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">GeneratedTokens Deviation(%)</td>
+                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">
+                                        <img src="img/down.png" height="12" /> 2377.69
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">TotalCalls Deviation(%)</td>
+                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">
+                                        <img src="img/down.png" height="12" /> 183.56
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #e7f7e2;padding:14px;">
+                            <h5 style="color:#454545;margin-bottom: 10px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Cost Spiked Conclusion</h5>
+                            <p style="color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                Cost spike was observed for the date which is given above and has a increase with its previous day cost , this change can be driven by majorly. usage based primarily driven by increased utilization and its dependencies on various factors which we have seen on the above formatted data table with its service,date and its utilization based on that given period of date. since we can analyze that this driven cost spike is leading to auto-scaling events that provisioned additional resources usage consumption as well which lead to increased in factors such as <strong>[higher traffic, workload surges, increased logging, or backups,increased API calls or external data transfers]</strong>.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Daily Cost Forecast: Past & Future of your Azure environment</h4>
+                                        <!--<h4 style="color:#eaeaea;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Based on CPU and Memory Utilization metrics</h4>-->
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This graph displays both the actual cost and forecasted cost of your Azure environment. The actual cost provides a day-wise breakdown of your expenditure, while the forecasted cost estimates spending for the upcoming days based on usage trends. This helps in understanding how expenses align with the budget set for the month. By analyzing this forecast, you can determine whether you're at risk of exceeding your budget or if you have sufficient funds remaining for resource utilization and production workloads.
+                            </p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="font-style:italic;color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                It shows the total consumption cost of used services on daily basis of current month followed by forecast cost using previous cost pattern.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Actual and Forecast Cost Summary</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">Cost range between actual consumption and its forecasted cost</h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <table cellpadding="0" cellspacing="14" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="border: 1px solid gainsboro;padding: 20px 10px;">
+                                        <span style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 24px;display: inline-block;margin-bottom: 4px;">$792.7</span>
+                                        <h6 style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Actual Cost</h6>
+                                    </td>
+                                    <td align="center" style="border: 1px solid gainsboro;padding: 20px 10px;position:relative">
+                                        <span style="position: absolute;left: -35px;top: 36px;display: inline-block;background-color: black;color: #e5e5e5;width: 50px;padding: 6px 0;border-radius: 2px;">Vs</span>
+                                        <span style="position: absolute;right: -35px;top: 36px;display: inline-block;background-color: black;color: #e5e5e5;width: 50px;padding: 6px 0;border-radius: 2px;">Vs</span>
+
+                                        <span style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 24px;display: inline-block;margin-bottom: 4px;">$93.3</span>
+                                        <h6 style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Forecast Cost</h6>
+                                    </td>
+                                    <td align="center" style="border: 1px solid gainsboro;padding: 20px 10px;">
+                                        <span style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 24px;display: inline-block;margin-bottom: 4px;">$800</span>
+                                        <h6 style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Budget Cost</h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="3" style="color:#5d5d5d;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;" ">
+                                        Percentage increase of actual cost with budget threshold :
+                                        <img src="img/down.png" height="12" /> 10.84%
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #e7f7e2;padding:14px;">
+                            <h5 style="color:#454545;margin-bottom: 10px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Conclusion</h5>
+                            <p style="color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This report summary shows the actual cloud expenditure,forecasted cost and the allocated budget threshold which will give you a insight about your cost and its prediction for future expenses . above data shows variance between actual and budgeted costs, indicating a [increase/decrease] in spending with in the environment. The primary reason for this deviation was increased utilization of specific services, leading to higher-than-expected consumption and cost spikes which leads to more increase in expenditure which we can show in above mentioned charts and data it is recommended to refine forecasting models, optimize resource allocation and implement cost control mechanisms to ensure better alignment with the budget in future periods.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Cost Anomalies</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">(Based on selected week days average Usage)</h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This graph displays cost anomalies in your spending environment based on resources and their anomaly cycles. It provides a breakdown of the monthly cycle on a weekly basis, allowing you to analyze anomalies for the selected month and week using the provided selection box. This eliminates the need for a time-consuming monthly analysis to identify cost spikes. Additionally, the graph highlights cost anomalies by comparing data from the selected week's current and previous periods, helping you quickly pinpoint irregularities.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <img src="img/snap-1.jpg" style="width:100%" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:14px;">
+                            <p style="font-style:italic;color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                It shows the cost comparision of AI resources on weekly basis for specific month.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Utilization Anomalies</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">
+                                            (Based on selected week days average Utilization)
+                                        </h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <p style="color:#454545;margin-bottom: 16px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                This graph displays utilization anomalies in your environment based on resources and their anomaly cycles. It provides a breakdown of the monthly cycle on a weekly basis, allowing you to analyze anomalies for the selected month and week using the provided selection box. This eliminates the need for a time-consuming monthly analysis to identify utilization spikes. Additionally, the graph highlights utilization anomalies by comparing data from the selected week's current and previous periods, helping you quickly pinpoint irregularities.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <img src="img/snap-1.jpg" style="width:100%" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding:14px;">
+                            <p style="font-style:italic;color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                It shows the cost comparision of AI resources on weekly basis for specific month.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="printableArea" style="margin-top:20px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;padding: 14px;background-color: #dfdcdc;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 17px;">Anomalies Summary Report</h4>
+                                        <h4 style="color:#383838;margin: 0;padding: 0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 14px;">
+                                            Cost and utilization variance summary report
+                                        </h4>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:14px;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;color: #494949;padding:2px 4px;" colspan="5" align="left">Cost Anomalies</th>
+                                    </tr>
+                                    <tr>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Resource Name</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Usage cycle Date</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Previous Week Cost<br /><span style="font-size: 13px;">(2024-10-18 - 2024-10-25)</span></th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Current Week Cost<br /><span style="font-size: 13px;">(2024-10-26 - 2024-11-01)</span></th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Deviation (%)</th>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aimasterclass</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-18 - 2024-11-01</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$12</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$21</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;"><img src="img/down.png" height="12"> 42.85%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aisqlintegration</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-18 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$7.5</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$12</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 37.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">asp-masterclass-s1</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$11</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$17</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 35.29%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">cs-openaio-pilot</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$6.6</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$9</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 26.66%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">ag-cloudatlas-prod</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$5.9</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$7</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 15.71%</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:14px;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;color: #494949;padding:2px 4px;" colspan="5" align="left">Utilization Anomalies</th>
+                                    </tr>
+                                    <tr>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Resource Name</th>
+                                        <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Usage cycle Date</th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Previous Week Cost<br /><span style="font-size: 13px;">Utilization(%)</span></th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Current Week Cost<br /><span style="font-size: 13px;">Utilization(%)</span></th>
+                                        <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Deviation (%)</th>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aimasterclass</td>
+                                        <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-18 - 2024-11-01</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$12</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$21</td>
+                                        <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;"><img src="img/down.png" height="12"> 42.85%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aisqlintegration</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-18 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$7.5</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$12</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 37.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">asp-masterclass-s1</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$11</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$17</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 35.29%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">cs-openaio-pilot</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$6.6</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$9</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 26.66%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">ag-cloudatlas-prod</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$5.9</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$7</td>
+                                        <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 15.71%</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #e2f7f6;padding:14px;">
+                            <h5 style="color:#454545;margin-bottom: 10px;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">Reason For Anomalies</h5>
+                            <p style="color:#454545;margin-bottom: 0;margin-top:0;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;">
+                                cost anomalies and utilization anomalies are critical indicators of inefficiencies or unexpected spikes in resource consumption. These anomalies can lead to excessive cloud spending, performance issues, and operational inefficiencies if not addressed promptly These anomalies may arise due to various factors, including Unexpected workload spikes Misconfigured services,Orphaned resources,Unoptimized storage and compute usage,high quota usages,highly utilization of tokens. we recommend to mitigate cost anomalies by Enable Budget Alerts, Perform Regular Cost Audits,Optimize Resource Allocation. Utilization anomalies occur when cloud resources are either over-utilized or underutilized, leading to performance inefficiencies or wasted spending these anomalies caused by Inefficient scaling strategies,CPU, memory, or storage bottlenecks,Sudden workload changes to help address utilization anomalies we recommend you to follow Implement Auto-Scaling Monitor Performance Metrics,Optimize Workloads,Schedule Non-Critical Resources and follow auto schedule shut down of resources of not needed.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
+
+
 
     <div id="emailModal" style="display: none;">
         <div>
