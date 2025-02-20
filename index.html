@@ -22,7 +22,7 @@
                 margin: 0;
                 padding: 0;
                 font-family: calibri, Arial, Helvetica, sans-serif;
-                font-size: 26px;
+                font-size: 22px;
             }
             .reportPgaeHeader p {
                 margin: 0;
@@ -34,8 +34,8 @@
                 border: 1px solid #c8c5c5;
                 padding: 6px;
                 border-radius: 4px;
-                width: 40px;
-                height: 40px;
+                width: 32px;
+                height: 32px;
                 margin-right: 8px;
             }
                 .reportPgaeHeader a:last-child{
@@ -96,6 +96,117 @@
                 border: none;
             }
         }
+/*.....popup...*/
+        #emailModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000000b5;
+            z-index: 999;
+        }
+
+            #emailModal > div {
+                width: 40%;
+                height: 100vh;
+                background-color: #fff;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                overflow-y: auto;
+                /*padding-top: 9px;*/
+            }
+        .modaltitle {
+            border-bottom: 1px solid #cfcccc;
+            display: flex;
+            align-items: center;
+            padding: 9px 14px;
+        }
+        .modaltitle img{
+
+        }
+            .modaltitle h4 {
+                margin: 0;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                font-size: 22px;
+                margin-left: 9px;
+                color: #373737;
+            }
+        .mdlFlds {
+            display: flex;
+            padding: 10px 14px;
+            align-items: end;
+        }
+            .mdlFlds span {
+                display: inline-block;
+                border: 1px solid #cfcccc;
+                padding: 8px;
+                border-radius: 4px;
+                margin-right: 8px;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                width:30px;
+                text-align:center;
+            }
+            .mdlFlds div {
+                width: calc(100% - 30px);
+            }
+                .mdlFlds div input {
+                    display: block;
+                    width: 100%;
+                    height: 20px;
+                    padding: .375rem 0;
+                    font-weight: 400;
+                    color: #495057;
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border-bottom: 2px solid #ced4da;
+                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                    border-top: 0;
+                    border-right: 0;
+                    border-left: 0;
+                    font-family: calibri, Arial, Helvetica, sans-serif;
+                    font-size: 16px;
+                }
+        .mdlFlds div input:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            /*box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);*/
+        }
+        .emailBodyBox{
+            padding:10px 14px;
+        }
+        .emailCtrls{
+            padding:10px 14px;
+            display:flex;
+        }
+            .emailCtrls a {
+                display: inline-block;
+                border: 1px solid gray;
+                color: #000;
+                text-decoration: none;
+                padding: 6px 28px;
+                margin-right: 8px;
+                border-radius: 4px;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+                .emailCtrls a:first-child {
+                    background-color: #5cd0ff;
+                    border: 1px solid #2e96c0;
+                }
+            .emailCtrls a:last-child{
+
+            }
+            .ck-editor__editable {
+                min-height: 300px;
+                max-height: 600px;
+            }
     </style>
 </head>
 <body style="background-color: #F0F0F0;margin:0;padding:0">
@@ -590,6 +701,33 @@
         </div>
     </div>
 
+    <div id="emailModal" style="display: none;">
+        <div>
+            <div class="modaltitle">
+                <img src="img/share2.png" /><h4>Share this report on email</h4>
+            </div>
+            <div>
+                <div class="mdlFlds">
+                    <span>To</span>
+                    <div>
+                        <input type="email" placeholder="" name="name" value="" />
+                    </div>
+                </div>
+                <div class="mdlFlds">
+                    <div style="width:100%">
+                        <input type="text" placeholder="Add a subject" name="name" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="emailBodyBox">
+                <textarea id="editor" style="height:400px"></textarea>
+            </div>
+            <div class="emailCtrls">
+                <a href="javascript:void()">Send</a>
+                <a href="javascript:void()" onclick="emailDoc()">Close</a>
+            </div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -601,7 +739,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
-    <script src="JavaScript.js?v1.5"></script>
+    <script src="JavaScript.js?v1.6"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                toolbar: ['bold', 'italic', 'underline', '|', 'link', 'undo', 'redo'],
+                placeholder: "Type your text here..."
+            })
+            .catch(error => {
+                console.error('Error initializing CKEditor:', error);
+            });
+    </script>
 </body>
 </html>

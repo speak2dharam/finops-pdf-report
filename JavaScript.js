@@ -45,6 +45,10 @@ function pdfDoc() {
     });
 }
 
+function emailDoc() {
+    $("#emailModal").toggle();
+}
+
 
 Highcharts.chart('costDistribution', {
     chart: {
