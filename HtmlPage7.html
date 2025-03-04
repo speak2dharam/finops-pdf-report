@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Recommendation Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .highlight {
+            background-color: #d1e7dd;
+            font-weight: bold;
+        }
+
+        .recommended {
+            background-color: #ffd700; /* Gold background for recommended model */
+            font-weight: bold;
+        }
+
+        .instruction-box {
+            background-color: #ffeeba;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">AI Model Recommendation Report</h2>
+
+        <!-- Client's Current Model -->
+        <h4>Current Model: <span class="text-primary">O1</span></h4>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Token Prompt Usage</th>
+                    <th>Generated Token Usage</th>
+                    <th>Estimated Cost</th>
+                    <th>Supported File Types</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>60%</td>
+                    <td>50%</td>
+                    <td>$100/month</td>
+                    <td>PDF, TXT, DOCX, JPG</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Recommended Alternative Models -->
+        <h4 class="mt-4">Recommended Models</h4>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Model Name</th>
+                    <th>Token Prompt Limit</th>
+                    <th>Generated Token Limit</th>
+                    <th>Estimated Cost</th>
+                    <th>Potential Savings</th>
+                    <th>Supported File Types</th>
+                    <th>Recommended</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-success">O1-Mini</td>
+                    <td>70%</td>
+                    <td>80%</td>
+                    <td class="text-danger">$70/month</td>
+                    <td class="highlight">$30/month</td>
+                    <td>PDF, TXT, DOCX</td>
+                    <td></td>
+                </tr>
+                <tr class="recommended">
+                    <td class="text-success">O3-Mini</td>
+                    <td>85%</td>
+                    <td>90%</td>
+                    <td class="text-danger">$60/month</td>
+                    <td class="highlight">$40/month</td>
+                    <td>PDF, TXT, DOCX, JSON</td>
+                    <td>✔ Recommended</td>
+                </tr>
+                <tr>
+                    <td class="text-success">40</td>
+                    <td>85%</td>
+                    <td>90%</td>
+                    <td class="text-danger">$90/month</td>
+                    <td class="highlight">$30/month</td>
+                    <td>PDF, TXT, DOCX, CSV, JPG</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Compatibility Issues & Instructions -->
+        <h4 class="mt-4">Important Instructions</h4>
+        <div class="instruction-box">
+            <strong>⚠ Note:</strong> The recommended model <strong>O3-Mini</strong> does not support **JPG files**. Since your current model O1 supports JPG, you may need an alternative method to process JPG files.
+        </div>
+    </div>
+
+</body>
+</html>

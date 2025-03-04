@@ -84,6 +84,92 @@
             border-radius: 4px;
             overflow:hidden;
         }
+/*....AI Model table...*/
+        table.modelTbl {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+            table.modelTbl th, table.modelTbl td {
+                padding: 12px;
+                border: 1px solid #dadada;
+                text-align: center;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                background-color: #fff;
+            }
+
+            table.modelTbl th {
+                background-color: #fff;
+                font-size: 18px;
+            }
+
+        .enterprise {
+            background-color: #81419b !important;
+            color: white;
+        }
+
+        .advance {
+            background-color: #f4a700 !important;
+            color: white;
+        }
+
+        .starter {
+            background-color: #e94d80 !important;
+            color: white;
+        }
+
+        .check {
+            color: green;
+            font-size: 20px;
+        }
+
+        .cross {
+            color: red;
+            font-size: 20px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-enterprise {
+            background-color: gray;
+            color: white;
+        }
+
+        .btn-advance {
+            background-color: #f4a700;
+            color: white;
+        }
+
+        .btn-starter {
+            background-color: gray;
+            color: white;
+        }
+        
+        table.modelInfoTbl {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+            table.modelInfoTbl th, table.modelInfoTbl td {
+                padding: 12px;
+                /*border: 1px solid #dadada;*/
+                text-align: center;
+                font-family: calibri, Arial, Helvetica, sans-serif;
+                /*background-color: #fff;*/
+            }
+
+            table.modelTbl th {
+                background-color: #fff;
+                font-size: 18px;
+            }
+/*..end of AI Model...*/
         @media print {
             @page {
                 size: A4;
@@ -1358,7 +1444,312 @@
                     </table>
                 </div>
             </section>
-            <section id="recommendations" class="section"></section>
+            <section id="recommendations" class="section">
+                <!--<table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td colspan="5" style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 21px;color: #494949;padding: 2px 4px;font-weight: 600;padding-top: 20px;border-bottom: 1px solid #cdcaca;padding-bottom: 10px;">
+                Recommendations
+            </td>
+        </tr>
+        <tr>
+            <td height="20"></td>
+        </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td style="border-right: 1px solid #cdcaca;padding: 8px">
+                Model Utilization
+                <img src="img/utilization.JPG" style="width:100%" />
+            </td>
+
+        </tr>
+        <tr>
+            <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;background-color: gainsboro;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;padding: 14px;">
+                                <h5 style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;margin:0;padding:0">Services Cost Breakdown Report</h5>
+                                <span>Current vs. Previous Cycle</span><br><strong>Nov 2024</strong>
+                            </td>
+                            <td align="center">
+                                <img src="img/right-arrow.png" height="35">
+                            </td>
+                            <td align="center" style="padding: 14px;border-left:1px solid #bab9b9;border-right:1px solid #bab9b9">
+                                <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;"> $ 990.85</span>
+                                <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block; font-weight: 600;color: #494949;">Current Cycle</span>
+                            </td>
+                            <td align="center" style="padding: 14px;border-right:1px solid #bab9b9">
+                                <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;"> $ 597.94</span>
+                                <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Previous Cycle</span>
+                            </td>
+                            <td align="center" style="padding: 14px;">
+                                <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;">$ 392.92</span>
+                                <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Cost Difference</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="bg-info">S.No</th>
+                            <th class="bg-info">SubscriptionId</th>
+                            <th class="bg-info">AppServicePlan</th>
+                            <th class="bg-info">No. of Appservice</th>
+                            <th class="bg-info">Resource Group</th>
+                            <th class="bg-info">Sku Tier</th>
+                            <th class="bg-info">Sku Capacity</th>
+                            <th class="bg-info">Sku Size</th>
+                            <th class="bg-info">Memory Utilization (%)</th>
+                            <th class="bg-info">CPU Utilization (%)</th>
+                            <th class="bg-info">Sku Tier</th>
+                            <th class="bg-info">Monthly Price</th>
+                            <th class="bg-info">Recommended Instance</th>
+                            <th class="bg-info">Recommended Tier Price</th>
+                            <th class="bg-info">Price Diff</th>
+                            <th class="bg-info">Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>062179ae-4f94-40cb-b67e-bbc95517c8a5</td>
+                            <td>ASP-rgfuncappopenaiprod-a2c6</td>
+                            <td>2</td>
+                            <td>rg-ech</td>
+                            <td>PremiumV3</td>
+                            <td>1</td>
+                            <td>P1v3</td>
+                            <td>36.49</td>
+                            <td>2.53</td>
+                            <td>PremiumV3 (P1v3 2Core(s), 8GB)</td>
+                            <td>113.15</td>
+                            <td>POV3 (1Core(s), 4GB)</td>
+                            <td style="background-color: #f8d7da;">73.7</td>
+                            <td>39.42</td>
+                            <td>
+                                <button class="btn btn-primary" onclick="downloadFile()">
+                                    <i class="fa fa-arrow-down"></i> DownSize
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>062179ae-4f94-40cb-b67e-bbc95517c8a5</td>
+                            <td>asp-serviceteammasterclass</td>
+                            <td>1</td>
+                            <td>rg-ech</td>
+                            <td>Standard</td>
+                            <td>1</td>
+                            <td>S1</td>
+                            <td>74.27</td>
+                            <td>45.12</td>
+                            <td>Standard(S1(1Core(s),1.8GB))</td>
+                            <td>73</td>
+                            <td>No change</td>
+                            <td style="background-color: #f8d7da;">No change</td>
+                            <td>0</td>
+                            <td>
+                                No Change
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>-->
+
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 21px;color: #494949;padding: 2px 4px;font-weight: 600;padding-top: 20px;border-bottom: 1px solid #cdcaca;padding-bottom: 10px;">
+                            Open AI Recommendations
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #b7b7b7;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td class="print-bg-gray" style="border-bottom: 1px solid gainsboro;background-color: gainsboro;">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;padding: 14px;">
+                                                        <h5 style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;margin:0;padding:0;color: #6e6b6b;">AI Model Recommendation Report for </h5>
+                                                        <span style="font-size:28px;">Model O1</span>
+                                                    </td>
+                                                    <td align="center">
+                                                        <img src="img/right-arrow.png" height="35">
+                                                    </td>
+                                                    <td align="center" style="padding: 14px;border-left:1px solid #bab9b9;border-right:1px solid #bab9b9">
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;">60%</span>
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block; font-weight: 600;color: #494949;">Token Prompt Usage</span>
+                                                    </td>
+                                                    <td align="center" style="padding: 14px;border-right:1px solid #bab9b9">
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;">50%</span>
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Generated Token Usage</span>
+                                                    </td>
+                                                    <td align="center" style="padding: 14px;border-right:1px solid #bab9b9">
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;">$100/month</span>
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Estimated Cost</span>
+                                                    </td>
+                                                    <td align="center" style="padding: 14px;">
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 28px;color: #494949;">PDF, TXT, DOCX, JPG</span>
+                                                        <span style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;display: block;font-weight: 600;color: #494949;">Supported Environment</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom: 1px solid #b7b7b7;">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <figure class="highcharts-figure">
+                                                        <div id="containerAI"></div>
+                                                    </figure>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:20px 10px;">
+                                        <table class="modelTbl">
+                                            <tr>
+                                                <th>Recommended Model Name</th>
+                                                <th class="enterprise">
+                                                    O1-Mini
+
+                                                </th>
+                                                <th class="advance">O3-Mini</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Token Prompt Limit</td>
+                                                <td style="font-size: 20px;">70%</td>
+                                                <td style="font-size: 20px;">85%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Generated Token Limit</td>
+                                                <td style="font-size: 20px;">80%</td>
+                                                <td style="font-size: 20px;">90%</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Estimated Cost</td>
+                                                <td class="check">$70/month</td>
+                                                <td class="check">	$60/month</td>
+                                            </tr>
+                                            <tr style="font-weight: 600;">
+                                                <td style="background-color: #e8f7e8;">Potential Savings</td>
+                                                <td style="background-color: #e8f7e8;" class="check">$30/month</td>
+                                                <td style="background-color: #e8f7e8;" class="check">	$40/month</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Supported Environment</td>
+                                                <td>PDF, TXT, DOCX</td>
+                                                <td>PDF, TXT, DOCX, JSON</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="background-color: transparent;border: none;"></td>
+                                                <td style="position:relative;min-width:200px;height:40px;">
+                                                    <img src="img/recommended.png" style="position: absolute;bottom: 0;left: 0;right: 0;margin: auto;width: 218px;" />
+                                                </td>
+                                                <td style="position:relative;"></td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px;">
+                                        <table class="modelInfoTbl">
+                                            <tr>
+                                                <td style="background-color: #f9efbc;border: 1px solid #e2d79c;color: #413910;">
+                                                    <strong>Note:</strong> The recommended model O3-Mini does not support **JPG files**. Since your current model O1 supports JPG, you may need an alternative method to process JPG files.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="0"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top:0">
+                                                    <h6 style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 24px;margin: 0;">Recommendation Summary</h6>
+                                                    <p style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;margin: 11px 0 0 0;">Based on your usage, we recommend switching to <strong>O3-Mini</strong> as it offers better token capacity at a lower cost.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #ffffff;padding: 20px;border-top: 1px solid #b7b7b7;">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th align="center" style="font-family: calibri, Arial, Helvetica, sans-serif;font-size: 18px;color: #494949;padding:2px 4px;" colspan="5">Cost Anomalies</th>
+                                                </tr>
+                                                <tr>
+                                                    <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Resource Name</th>
+                                                    <th align="left" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Usage cycle Date</th>
+                                                    <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Previous Week Cost<br><span style="font-size: 13px;">(2024-10-18 - 2024-10-25)</span></th>
+                                                    <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Current Week Cost<br><span style="font-size: 13px;">(2024-10-26 - 2024-11-01)</span></th>
+                                                    <th align="right" style="border-top:2px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">Deviation (%)</th>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aimasterclass</td>
+                                                    <td align="left" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-18 - 2024-11-01</td>
+                                                    <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$12</td>
+                                                    <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">$21</td>
+                                                    <td align="right" style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;"><img src="img/down.png" height="12"> 42.85%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">aisqlintegration</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-18 - 2024-11-01</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$7.5</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$12</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 37.5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">asp-masterclass-s1</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$11</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$17</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 35.29%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">cs-openaio-pilot</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$6.6</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$9</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 26.66%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">ag-cloudatlas-prod</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;">2024-10-27 - 2024-11-01</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$5.9</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right">$7</td>
+                                                    <td style="border-top:1px solid #cfcccc;font-family: calibri, Arial, Helvetica, sans-serif;font-size: 16px;color: #494949;padding:2px 4px;" align="right"><img src="img/down.png" height="12"> 15.71%</td>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </div>
     </div>
 
@@ -1440,6 +1831,83 @@
 
         // Event listener for scrolling
         window.addEventListener('scroll', scrollSpy);
+    </script>
+    <script>
+        // Data retrieved from https://en.wikipedia.org/wiki/Winter_Olympic_Games
+        Highcharts.chart('containerAI', {
+
+            chart: {
+                type: 'column',
+                backgroundColor: 'transparent', // Removes background color
+                style: {
+                    fontFamily: 'Arial, sans-serif' // Sets global font family
+                }
+            },
+
+            title: {
+                text: 'Olympic Games all-time medal table, grouped by continent',
+                align: 'left',
+                style: {
+                    fontSize: '16px', // Modify title font size
+                    fontWeight: 'bold'
+                }
+            },
+            credits: {
+                enabled: false // Removes the Highcharts credit
+            },
+            xAxis: {
+                categories: ['Gold', 'Silver', 'Bronze'],
+                labels: {
+                    style: {
+                        fontSize: '12px' // Modify font size for x-axis labels
+                    }
+                }
+            },
+
+            yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: 'Count medals'
+                },
+                labels: {
+                    style: {
+                        fontSize: '12px' // Modify font size for x-axis labels
+                    }
+                }
+            },
+
+            tooltip: {
+                format: '<b>{key}</b><br/>{series.name}: {y}<br/>' +
+                    'Total: {point.stackTotal}'
+            },
+
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    pointWidth: 30 // Adjust the bar width (reduce for thinner bars)
+                },
+            },
+
+            series: [{
+                name: 'Norway',
+                data: [148, 133, 124],
+                stack: 'Europe'
+            }, {
+                name: 'Germany',
+                data: [102, 98, 65],
+                stack: 'Europe'
+            }, {
+                name: 'United States',
+                data: [113, 122, 95],
+                stack: 'North America'
+            }, {
+                name: 'Canada',
+                data: [77, 72, 80],
+                stack: 'North America'
+            }]
+        });
+
     </script>
 </body>
 </html>
